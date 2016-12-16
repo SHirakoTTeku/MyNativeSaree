@@ -20,7 +20,13 @@ text-align: center;
 
 <div class="row">
 <div class="col-lg-12">
-content
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="glyphicon glyphicon-shopping-cart"></div>
+Store
+</div>
+<div class="panel-body">Content</div>
+</div>
 </div>
 </div>
 
