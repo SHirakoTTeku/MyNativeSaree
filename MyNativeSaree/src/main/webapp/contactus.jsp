@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<jsp:include page="template.jsp"></jsp:include>
+<h1>Contact Us</h1>
 </body>
 </html>

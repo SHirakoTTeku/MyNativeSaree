@@ -9,15 +9,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
-<nav class="navbar-default">
+<nav class="navbar-inverse">
 <div class="container-fluid">
 <div class="navbar-header">
-<a class="navbar-brand" href=#>Web Portal</a></div>
+<a class="navbar-brand" href="index.jsp">Web Portal</a></div>
 <ul class="nav navbar-nav">
-<li><a href=navlinks/home.jsp>Home Page</a>
-<li><a href=aboutus.jsp>About Us</a>
-<li><a href=#>Link 3</a>
-<li><a href=#>Link 4</a>
+<li><a href="home.jsp">Home Page</a>
+<li><a href="aboutus.jsp">About Us</a>
+<li><a href=contactus.jsp>Contact Us</a>
+<li><a href=registrationpage.jsp>Register Here</a>
 </ul>
 </div>
 </nav>
