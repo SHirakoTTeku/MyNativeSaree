@@ -11,11 +11,12 @@
 <a class="navbar-brand" href=#>Web Portal</a></div>
 <ul class="nav navbar-nav">
 <li><a href=navlinks/home.jsp>Home Page</a>
-<li><a href=>Link 2</a>
-<li><a href=#>Link 3</a>
-<li><a href=#>Link 4</a>
+<li><a href=navlinks/aboutus.jsp>About Us</a>
+<li><a href=navlinks/contactus.jsp>Contact Us</a>
+<li><a href=navlinks/registrationpage.jsp>Register</a>
 </ul>
 </div>
+
 </nav>
 </body>
 </html>

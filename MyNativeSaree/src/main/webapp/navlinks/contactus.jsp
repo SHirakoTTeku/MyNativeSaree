@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-About us Page
+
 </body>
 </html>
