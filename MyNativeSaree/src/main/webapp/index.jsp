@@ -5,7 +5,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<nav class="navbar-default">
+<nav class="navbar-inverse">
 <div class="container-fluid">
 <div class="navbar-header">
 <a class="navbar-brand" href=#>Web Portal</a></div>
