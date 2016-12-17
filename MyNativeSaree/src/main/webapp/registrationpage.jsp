@@ -17,10 +17,20 @@
 </div>
 <div class="panel panel-body">
 <form method="post">
+<pre>
 <div class="input-group input-group-sm">
 <span class="input-group-addon" id="sizing-addon1">User Name</span>
 <input type="text" class="form-control" placeholder="Enter your User Name" aria-describedby="sizing-addon1">
 </div>
+<div class="input-group input-group-sm">
+<span class="input-group-addon" id="sizing-addon2">Password</span>
+<input type="text" class="form-control" placeholder="Enter your Password" aria-describedby="sizing-addon2">
+</div>
+<div class="input-group input-group-sm">
+<span class="input-group-addon" id="sizing-addon3">Confirm Password</span>
+<input type="text" class="form-control" placeholder="Enter your Password Again" aria-describedby="sizing-addon2">
+</div>
+</pre>
 </form>
 </div>
 </div>
