@@ -28,6 +28,7 @@
 </div>
 <div class="input-group input-group-sm">
 <span class="input-group-addon" id="sizing-addon3">Confirm Password</span>
+<<<<<<< HEAD
 <input type="text" class="form-control" placeholder="Enter your Password Again" aria-describedby="sizing-addon3">
 </div>
 <div class="input-group input-group-sm">
@@ -38,6 +39,9 @@
 <button type="submit" class="btn">
 submit</button>
 <button type="reset" class="btn">Reset</button>
+=======
+<input type="text" class="form-control" placeholder="Enter your Password Again" aria-describedby="sizing-addon2">
+>>>>>>> 16b6b997d62a7ee4653d16f3edfd6becc9e98785
 </div>
 </pre>
 </form>
