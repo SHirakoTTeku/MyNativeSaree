@@ -12,9 +12,9 @@
 <nav class="navbar-inverse">
 <div class="container-fluid">
 <div class="navbar-header">
-<a class="navbar-brand" href="index.jsp">My Native Saree</a></div>
+<a class="navbar-brand" href="index.jsp"><font size="5">My Native Saree</font></a></div>
 <ul class="nav navbar-nav">
-<li><a href="home.jsp">Home Page</a>
+<!-- <li><a href="home.jsp">Home Page</a>-->
 <li><a href="aboutus.jsp">About Us</a>
 <li><a href=contactus.jsp>Contact Us</a>
 <li><a href=registrationpage.jsp>Register Here</a>
@@ -23,3 +23,4 @@
 </nav>
 </body>
 </html>
+<!--comment-->
