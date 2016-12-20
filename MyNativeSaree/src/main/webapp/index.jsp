@@ -14,7 +14,7 @@ text-align: center;
 </style>
 </head>
 <body>
-<jsp:include page="/template.jsp"></jsp:include>
+<jsp:include page="Templates//template.jsp"></jsp:include>
 <div class="container">
 
 
