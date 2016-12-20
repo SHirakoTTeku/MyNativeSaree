@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="template.jsp"></jsp:include>
+<jsp:include page="Templates/template.jsp"></jsp:include>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
