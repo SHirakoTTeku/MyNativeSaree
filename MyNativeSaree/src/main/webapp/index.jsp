@@ -25,7 +25,7 @@ text-align: center;
 <div class="glyphicon glyphicon-shopping-cart"></div>
 Store
 </div>
-<div class="panel-body">Content</div>
+<center><div class="panel-body">Welcome to MyNativeSaree!</div></center>
 </div>
 </div>
 </div>
