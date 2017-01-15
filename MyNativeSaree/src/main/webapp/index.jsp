@@ -18,7 +18,7 @@ text-align: center;
   </style>
 </head>
 <body>
-<jsp:include page="Templates//template.jsp"></jsp:include>
+<jsp:include page="Templates/template.jsp"></jsp:include><br><br>
 <div class="container">
 
 
@@ -29,7 +29,7 @@ text-align: center;
 <div class="glyphicon glyphicon-shopping-cart"></div>
 Store
 </div>
-<center><div class="panel-body">
+<center></center><div class="panel-body">
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
