@@ -65,7 +65,8 @@ Store
     </a>
   </div>
 </div>
-</div></center>
+</div>
+</center>
 </div>
 </div>
 </div>

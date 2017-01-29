@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>About Us</title>
 </head>
 <body>
 <jsp:include page="Templates/template.jsp"></jsp:include>
-<h1>About us Page</h1>
+<h1>This is About us Page</h1>
 </body>
 </html>

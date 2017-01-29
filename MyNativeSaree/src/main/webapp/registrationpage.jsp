@@ -13,7 +13,7 @@
 				<div class="col-lg-6">
 <div class="panel panel-default">
 <div class="panel panel-heading">
-<h1>Register Page</h1>
+<h1>Registration Page</h1>
 </div>
 <div class="panel panel-body">
 <form method="post">

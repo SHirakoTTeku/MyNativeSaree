@@ -8,6 +8,6 @@
 </head>
 <body>
 <jsp:include page="Templates/template.jsp"></jsp:include>
-<h3>Login Page</h3>
+<h3>This is Login Page</h3>
 </body>
 </html>

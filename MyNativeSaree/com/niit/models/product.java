@@ -21,10 +21,10 @@ public double getproduct_Price(){
 }
 
 //Getter Setter for Product Quantity
-public double setproduct_quantity(double product_quantity){
+public double setproduct_Quantity(double product_quantity){
 this.product_quantity=product_quantity;	
 }
-public double getproduct_quantity(){
+public double getproduct_Quantity(){
 	return product_quantity;
 }
 
