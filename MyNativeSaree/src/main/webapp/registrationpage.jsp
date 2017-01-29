@@ -24,11 +24,11 @@
 </div>
 <div class="input-group input-group-sm">
 <span class="input-group-addon" id="sizing-addon2">Password</span>
-<input type="text" class="form-control" placeholder="Enter your Password" aria-describedby="sizing-addon2">
+<input type="password" class="form-control" placeholder="Enter your Password" aria-describedby="sizing-addon2">
 </div>
 <div class="input-group input-group-sm">
 <span class="input-group-addon" id="sizing-addon3">Confirm Password</span>
-<input type="text" class="form-control" placeholder="Enter your Password Again" aria-describedby="sizing-addon3">
+<input type="password" class="form-control" placeholder="Enter your Password Again" aria-describedby="sizing-addon3">
 </div>
 <div class="input-group input-group-sm">
 <span class="input-group-addon" id="sizing-addon4">E-Mail Identification</span>
