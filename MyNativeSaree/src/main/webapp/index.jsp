@@ -29,7 +29,7 @@ text-align: center;
 <div class="glyphicon glyphicon-shopping-cart"></div>
 Store
 </div>
-<center></center><div class="panel-body">
+<center><div class="panel-body">
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -71,6 +71,5 @@ Store
 </div>
 
 </div>
-
 </body>
 </html>

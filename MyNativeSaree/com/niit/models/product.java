@@ -1,7 +1,7 @@
-
+package com.niit.models;
 public class product {
 int product_id;
-double product_price;
+double product_price,product_quantity;
 String product_name,product_img;
 
 
@@ -18,6 +18,14 @@ public double setproduct_Price(double product_price){
 }
 public double getproduct_Price(){
 	return product_price;
+}
+
+//Getter Setter for Product Quantity
+public double setproduct_quantity(double product_quantity){
+this.product_quantity=product_quantity;	
+}
+public double getproduct_quantity(){
+	return product_quantity;
 }
 
 //Getter Setter for Product Name
