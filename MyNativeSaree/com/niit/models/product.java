@@ -5,14 +5,14 @@ double product_price,product_quantity;
 String product_name,product_img;
 
 
-//getter setter for Product ID
+//Getter Setter for Product ID
 public int setproduct_Id(int product_id){
 this.product_id=product_id;	
 }
 public int getproduct_Id(){
 	return product_id;
 }
-//Getter setter for Product Price
+//Getter Setter for Product Price
 public double setproduct_Price(double product_price){
 	this.product_price=product_price;
 }
