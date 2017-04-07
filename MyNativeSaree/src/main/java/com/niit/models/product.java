@@ -6,14 +6,14 @@ String product_name,product_img;
 
 
 //Getter Setter for Product ID
-public int setproduct_Id(int product_id){
+public void setproduct_Id(int product_id){
 this.product_id=product_id;	
 }
 public int getproduct_Id(){
 	return product_id;
 }
 //Getter Setter for Product Price
-public double setproduct_Price(double product_price){
+public void setproduct_Price(double product_price){
 	this.product_price=product_price;
 }
 public double getproduct_Price(){
@@ -21,7 +21,7 @@ public double getproduct_Price(){
 }
 
 //Getter Setter for Product Quantity
-public double setproduct_Quantity(double product_quantity){
+public void setproduct_Quantity(double product_quantity){
 this.product_quantity=product_quantity;	
 }
 public double getproduct_Quantity(){
@@ -29,7 +29,7 @@ public double getproduct_Quantity(){
 }
 
 //Getter Setter for Product Name
-public String setproduct_Name(String product_name){
+public void setproduct_Name(String product_name){
 	this.product_name=product_name;
 }
 public String getproduct_Name(){
@@ -37,7 +37,7 @@ public String getproduct_Name(){
 }
 
 //Getter Setter for Product Image
-public String setproduct_Img(String product_img){
+public void setproduct_Img(String product_img){
 	this.product_img=product_img;
 }
 public String getproduct_Img(){

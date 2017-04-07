@@ -29,7 +29,7 @@ text-align: center;
 <div class="glyphicon glyphicon-shopping-cart"></div>
 Store
 </div>
-<center><div class="panel-body">
+<div class="panel-body">
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -43,15 +43,15 @@ Store
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="Product_Images/pimg1.jpg" alt="Chania" width="360" height="245">
+        <img src="resources/images/pimg1.jpg" alt="Chania" width="360" height="245">
       </div>
 
       <div class="item">
-        <img src="Product_Images/pimg2.jpg" alt="Chania" width="360" height="245">
+        <img src="resources/images/pimg2.jpg" alt="Chania" width="360" height="245">
       </div>
     
       <div class="item">
-        <img src="Product_Images/pimg3.jpg" alt="Flower" width="360" height="245">
+        <img src="resources/images/pimg3.jpg" alt="Flower" width="360" height="245">
       </div>
 
     <!-- Left and right controls -->
@@ -66,7 +66,6 @@ Store
   </div>
 </div>
 </div>
-</center>
 </div>
 </div>
 </div>
