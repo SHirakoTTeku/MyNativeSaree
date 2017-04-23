@@ -38,12 +38,10 @@
 <div class="navbar-header">
 <a class="navbar-brand" href="index"><font size="5">My Native Saree</font></a></div>
 <ul class="nav navbar-nav">
-<!-- <li><a href="home">Home Page</a>-->
-<li><a href="aboutus">About Us</a>
-<li><a href=contactus>Contact Us</a>
-<li><a href="login">Login</a>
-<li><a href=registrationpage>Register Here</a>
-<li><a href=adminbar>Admin</a>
+<li><a href="index">Home Page</a>
+<li><a href="addproduct">Add Product</a>
+<li><a href="addcategory">Add Category</a>
+<li><a href="addsupplier">Add Supplier</a>
 </ul>
 </div>
 </nav>

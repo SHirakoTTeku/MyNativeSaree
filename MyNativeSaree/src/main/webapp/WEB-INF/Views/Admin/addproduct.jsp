@@ -4,18 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-
+<title>Add Product</title>
 </head>
 <body>
-<jsp:include page="Templates/template.jsp"></jsp:include>
-<h3></h3>
+<jsp:include page="/WEB-INF/Views/Admin/adminbar.jsp"></jsp:include><br><br>
 <div class="container">
 			<div class="row">
 				<div class="col-lg-6">
 <div class="panel panel-default">
 <div class="panel panel-heading">
-<h1><center>Login</center></h1>
+<h1><center>Add Product</center></h1>
 </div>
 <div class="panel panel-body">
 <div class="table-responsive">
@@ -23,19 +21,25 @@
 <form method="post">
 	<tr>
 		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon1">User Name</span></td>
-		<td><input type="text" class="form-control" placeholder="Enter your User Name" aria-describedby="sizing-addon1"></td>
+		<td><span class="input-group-addon" id="sizing-addon1">Product Name</span></td>
+		<td><input type="text" class="form-control" placeholder="Enter Product name" aria-describedby="sizing-addon1"></td>
 		</div>
 	</tr>
 	<tr>
 		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon2">Password</span></td>
-		<td><input type="password" class="form-control" placeholder="Enter your Password" aria-describedby="sizing-addon2"></td>
+		<td><span class="input-group-addon" id="sizing-addon2">Product Price</span></td>
+		<td><input type="password" class="form-control" placeholder="Enter Product price" aria-describedby="sizing-addon2"></td>
 		</div>
 	</tr>
 	<tr>
 		<div class="input-group input-group-sm">
-		<td><button type="submit" class="btn">submit</button></td>
+		<td><span class="input-group-addon" id="sizing-addon2">Product Quantity</span></td>
+		<td><input type="password" class="form-control" placeholder="Enter Product Quantity" aria-describedby="sizing-addon2"></td>
+		</div>
+	</tr>
+	<tr>
+		<div class="input-group input-group-sm">
+		<td><button type="submit" class="btn">Add Product</button></td>
 		<td><button type="reset" class="btn">Reset</button></td>
 		</div>
 	</tr>

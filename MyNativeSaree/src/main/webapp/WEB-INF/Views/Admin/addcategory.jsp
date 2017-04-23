@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="Templates/template.jsp"></jsp:include>
-<h1>This is Home Page</h1>
+<jsp:include page="/WEB-INF/Views/Admin/adminbar.jsp"></jsp:include><br><br>
 </body>
 </html>

@@ -1,47 +1,47 @@
 package com.niit.models;
 public class product {
-int product_id;
-double product_price,product_quantity;
-String product_name,product_img;
+	private int pid,qnty;
+	private String pname,pimg;
+	private double price;
+	public int getPid() {
+		return pid;
+	}
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+	public int getQnty() {
+		return qnty;
+	}
+	public void setQnty(int qnty) {
+		this.qnty = qnty;
+	}
+	public String getPname() {
+		return pname;
+	}
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+	public String getPimg() {
+		return pimg;
+	}
+	public void setPimg(String pimg) {
+		this.pimg = pimg;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public product(int pid, int qnty, String pname, String pimg, double price) {
+		super();
+		this.pid = pid;
+		this.qnty = qnty;
+		this.pname = pname;
+		this.pimg = pimg;
+		this.price = price;
+	}
 
 
-//Getter Setter for Product ID
-public void setproduct_Id(int product_id){
-this.product_id=product_id;	
-}
-public int getproduct_Id(){
-	return product_id;
-}
-//Getter Setter for Product Price
-public void setproduct_Price(double product_price){
-	this.product_price=product_price;
-}
-public double getproduct_Price(){
-	return product_price;
 }
 
-//Getter Setter for Product Quantity
-public void setproduct_Quantity(double product_quantity){
-this.product_quantity=product_quantity;	
-}
-public double getproduct_Quantity(){
-	return product_quantity;
-}
-
-//Getter Setter for Product Name
-public void setproduct_Name(String product_name){
-	this.product_name=product_name;
-}
-public String getproduct_Name(){
-	return product_name;
-}
-
-//Getter Setter for Product Image
-public void setproduct_Img(String product_img){
-	this.product_img=product_img;
-}
-public String getproduct_Img(){
-	return product_img;
-}
-
-}
