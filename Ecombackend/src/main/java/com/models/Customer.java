@@ -24,7 +24,7 @@ public class Customer {
 
 	@Id
 	@SequenceGenerator(name="cust_seq", sequenceName="cust_seq")
-	@GeneratedValue(strategy=GenetrationType.AUTO, generator="cust_seq")
+	@GeneratedValue(strategy=GenerationType.AUTO, generator="cust_seq")
 	@Column(name="CustID")
 	
 	int custId;
