@@ -12,24 +12,29 @@
 <div class="row">
 <div class="col-lg-6">
 <div class="panel panel-default">
-<div class="panel panel-heading"><h1>Contact Us</h1></div>
+<div class="panel panel-heading"><h1><center>Contact Us</center></h1></div>
 <div class="panl panel-body">
-<pre>
+<div class="table-responsive">
+<table class="table">
 <form method="post" action="">
-<div class="input-group input-group-sm">
-<span class="input-group-addon">Name</span>
-<input type="text" placeholder="Enter Your Name" class="form-control">
-</div>
-<div class="input-group input-group-sm">
-<span class="input-group-addon">E-Mail</span>
-<input type="text" placeholder="Enter your Email-ID" class="form-control">
-</div>
-<div class="input-group input-group-sm">
-<span class="input-group-addon">Description</span>
-<textarea rows="10" cols="30" class="form-control"></textarea>
-</div>
+	<tr>
+		<div class="input-group input-group-sm">
+		<td><span class="input-group-addon">Name</span></td>
+		<td><input type="text" placeholder="Enter Your Name" class="form-control"></td>
+		</div></tr>
+	<tr>	
+		<div class="input-group input-group-sm">
+		<td><span class="input-group-addon">E-Mail</span></td>
+		<td><input type="email" placeholder="Enter your Email-ID" class="form-control"></td>
+		</div></tr>
+	<tr>	
+		<div class="input-group input-group-sm">
+		<td><span class="input-group-addon">Description</span></td>
+		<td><textarea rows="10" cols="30" class="form-control"></textarea></td>
+		</div></tr>
 </form>
-</pre>
+</table>
+</div>
 </div>
 </div>
 </div>

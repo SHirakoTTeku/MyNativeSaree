@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>${title}</title>
 </head>
 <body>
 <jsp:include page="Templates/template.jsp"></jsp:include>
@@ -13,34 +13,38 @@
 				<div class="col-lg-6">
 <div class="panel panel-default">
 <div class="panel panel-heading">
-<h1>Registration Page</h1>
+<h1><center>Registration Page</center></h1>
 </div>
 <div class="panel panel-body">
+<div class="table-responsive">
+<table class="table">
 <form method="post">
-<pre>
-<div class="input-group input-group-sm">
-<span class="input-group-addon" id="sizing-addon1">User Name</span>
-<input type="text" class="form-control" placeholder="Enter your User Name" aria-describedby="sizing-addon1">
-</div>
-<div class="input-group input-group-sm">
-<span class="input-group-addon" id="sizing-addon2">Password</span>
-<input type="password" class="form-control" placeholder="Enter your Password" aria-describedby="sizing-addon2">
-</div>
-<div class="input-group input-group-sm">
-<span class="input-group-addon" id="sizing-addon3">Confirm Password</span>
-<input type="password" class="form-control" placeholder="Enter your Password Again" aria-describedby="sizing-addon3">
-</div>
-<div class="input-group input-group-sm">
-<span class="input-group-addon" id="sizing-addon4">E-Mail Identification</span>
-<input type="text" class="form-control" placeholder="Enter your E-Mail ID" aria-describedby="sizing-addon4">
-</div>
-<div class="btn-group">
-<button type="submit" class="btn">
-submit</button>
-<button type="reset" class="btn">Reset</button>
-</div>
-</pre>
+	<tr>
+		<div class="input-group input-group-sm">
+		<td><span class="input-group-addon" id="sizing-addon1">User Name</span></td>
+		<td><input type="text" class="form-control" placeholder="Enter your User Name" aria-describedby="sizing-addon1"></td>
+		</div> </tr>
+	<tr>	
+		<div class="input-group input-group-sm">
+		<td><span class="input-group-addon" id="sizing-addon2">Password</span></td>
+		<td><input type="password" class="form-control" placeholder="Enter your Password" aria-describedby="sizing-addon2"></td>
+		</div></tr>
+	<tr>	
+		<div class="input-group input-group-sm">
+		<td><span class="input-group-addon" id="sizing-addon3">Confirm Password</span></td>
+		<td><input type="password" class="form-control" placeholder="Enter your Password Again" aria-describedby="sizing-addon3"></td>
+		</div></tr>
+	<tr>
+		<div class="input-group input-group-sm">
+		<td><span class="input-group-addon" id="sizing-addon4">E-Mail Identification</span></td>
+		<td><input type="text" class="form-control" placeholder="Enter your E-Mail ID" aria-describedby="sizing-addon4"></td>
+		</div></tr>
+	<tr>
+	<td><button type="submit" class="btn">submit</button></td>
+	<td><button type="reset" class="btn">Reset</button></td>
+	</tr>
 </form>
+</table>
 </div>
 </div>
 				</div>

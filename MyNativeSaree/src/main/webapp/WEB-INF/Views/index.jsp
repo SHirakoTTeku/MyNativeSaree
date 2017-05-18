@@ -19,17 +19,6 @@ text-align: center;
 </head>
 <body>
 <jsp:include page="Templates/template.jsp"></jsp:include><br><br>
-<div class="container">
-
-
-<div class="row">
-<div class="col-lg-12">
-<div class="panel panel-default">
-<div class="panel-heading">
-<div class="glyphicon glyphicon-shopping-cart"></div>
-Store
-</div>
-<div class="panel-body">
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -64,12 +53,6 @@ Store
       <span class="sr-only">Next</span>
     </a>
   </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
 </div>
 </body>
 </html>
