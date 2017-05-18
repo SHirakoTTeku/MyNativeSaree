@@ -41,7 +41,34 @@ public class User {
 	@OneToOne
 	@JoinColumn(name="custId")
 	@Valid
-	
+	private Customer cust;
+	private String password;
+	private boolean enable ;
+	public Customer getCust() {
+		return cust;
+	}
+	public void setCust(Customer cust) {
+		this.cust = cust;
+	}
+	@Column(name="PASSWORD")
+	@NotBlank
+	@Size(min=6, max=30)
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	@Column(name="ENABLE")
+	public boolean isEnable() {
+		return enable;
+	}
+	public void setEnable(boolean enable) {
+		this.enable = enable;
+	}
+	public String getUsername() {
+		return username;
+	}
 
 
 }
