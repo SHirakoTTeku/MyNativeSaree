@@ -21,7 +21,7 @@ public class Order implements Serializable{
 	private int oId;
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="userId")
-	private Customer usrdetails;
+	private Customer userdetails;
 	
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="cardId")

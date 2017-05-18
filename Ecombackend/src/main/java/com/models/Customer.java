@@ -60,7 +60,7 @@ public class Customer {
 	public void setCart(Cart cart){
 		this.cart=cart;
 	}
-	@OneToOne(fetch=FetchType.Eager)
+	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="cartid")
 	@JsonIgnore
 	private Cart cart;
