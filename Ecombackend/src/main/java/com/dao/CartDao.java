@@ -6,5 +6,5 @@ public interface CartDao {
 	void addCart(Cart c);
 	void updateCart(Cart c);
 	void deleteCart(Cart c);
-	void getCartById(int cartId);
+	public Cart getCartById(int cartId);
 	}
