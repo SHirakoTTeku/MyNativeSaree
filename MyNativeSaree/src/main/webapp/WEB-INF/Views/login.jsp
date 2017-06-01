@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-
+<title>Login Page</title>
+<script src="resources/js/angular.min.js" ></script>
+<script src="resources/js/login.js" ></script>
 </head>
-<body>
+<body ng-app="myModule">
 <jsp:include page="Templates/template.jsp"></jsp:include>
 <h3></h3>
 <div class="container">
@@ -22,9 +23,9 @@
 <table class="table">
 <form method="post">
 	<tr>
-		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon1">User Name</span></td>
-		<td><input type="text" class="form-control" placeholder="Enter your User Name" aria-describedby="sizing-addon1"></td>
+		<div class="input-group input-group-sm"  ng-controller="myController">
+		<td><span class="input-group-addon" id="sizing-addon1">User Name : <font color="#ff1a1a">{{message}}</font></span></td>
+		<td><input type="text" class="form-control" placeholder="Enter your User Name" aria-describedby="sizing-addon1" ng-model="message"></td>
 		</div>
 	</tr>
 	<tr>
