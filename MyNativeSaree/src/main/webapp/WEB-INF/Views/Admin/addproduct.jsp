@@ -39,6 +39,12 @@
 	</tr>
 	<tr>
 		<div class="input-group input-group-sm">
+		<td><span class="input-group-addon" id="sizing-addon2">Image Path</span></td>
+		<td><input type="file" class="form-control" aria-describedby="sizing-addon2"></td>
+		</div>
+	</tr>
+	<tr>
+		<div class="input-group input-group-sm">
 		<td><button type="submit" class="btn">Add Product</button></td>
 		<td><button type="reset" class="btn">Reset</button></td>
 		</div>

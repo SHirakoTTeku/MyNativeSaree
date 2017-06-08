@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="MyNativeSareeFrontEnd">
+    <wb-module deploy-name="MyNativeSaree">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
@@ -7,7 +7,7 @@
         <dependent-module archiveName="Ecombackend-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Ecombackend/Ecombackend">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <property name="java-output-path" value="/MyNativeSareeFrontEnd/target/classes"/>
-        <property name="context-root" value="MyNativeSareeFrontEnd"/>
+        <property name="context-root" value="MyNativeSaree"/>
+        <property name="java-output-path" value="/MyNativeSaree/target/classes"/>
     </wb-module>
 </project-modules>
