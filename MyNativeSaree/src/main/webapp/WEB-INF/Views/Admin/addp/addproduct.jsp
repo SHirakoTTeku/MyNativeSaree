@@ -5,10 +5,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Add Product</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+.errStyle {
+	color:red;
+	font-style: italic;
+	font-weight: bold;
+}
+</style>
 </head>
 <body>
 <jsp:include page="/WEB-INF/Views/Admin/adminbar.jsp"></jsp:include><br><br>
 <div class="container">
+<span style="color:green;font-size:20px;">
+ ${msg}
+ <br/>
+ </span>
 			<div class="row">
 				<div class="col-lg-6">
 <div class="panel panel-default">
@@ -18,13 +33,23 @@
 <div class="panel panel-body">
 <div class="table-responsive">
 <table class="table">
-<form method="post">
+<form:form role="form" action="add" method="post" modelAttribue="product" enctype="multipart/form-data">
 	<tr>
+		<div class="form-group">
 		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon1">Product Name</span></td>
-		<td><input type="text" class="form-control" placeholder="Enter Product name" aria-describedby="sizing-addon1"></td>
-		</div>
-	</tr>
+		<td><span class="input-group-addon" id="sizing-addon1">
+		<form:label  path="name">
+						<spring:message text="Product Name"/>
+				</form:label>
+		</span></td>
+		<td><form:input style="20%;" class="form-control" path="name" />
+				<form:errors path="name" >
+						<p class="errStyle">
+								* Product Name should be atleast 3 characters
+						</p>
+ 				</form:errors></td>
+		</div></div>
+		</tr>
 	<tr>
 		<div class="input-group input-group-sm">
 		<td><span class="input-group-addon" id="sizing-addon2">Product Price</span></td>
@@ -49,7 +74,7 @@
 		<td><button type="reset" class="btn">Reset</button></td>
 		</div>
 	</tr>
-</form>
+</form:form>
 </table>
 </div>
 </div>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -39,9 +40,9 @@
 <a class="navbar-brand" href="index"><font size="5">My Native Saree</font></a></div>
 <ul class="nav navbar-nav">
 <li><a href="index">Home Page</a>
-<li><a href="addproduct">Add Product</a>
-<li><a href="addcategory">Add Category</a>
-<li><a href="addsupplier">Add Supplier</a>
+<li><a href="/MyNativeSaree/admin/addp/add">Add Product</a>
+<li><a href="deleteproduct">Delete Product</a>
+<li><a href="updateproduct">Edit Product</a>
 </ul>
 </div>
 </nav>
