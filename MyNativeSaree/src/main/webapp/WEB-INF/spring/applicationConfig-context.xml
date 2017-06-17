@@ -13,15 +13,6 @@
  		http://www.springframework.org/schema/tx/spring-tx.xsd
  		http://www.springframework.org/schema/security
         http://www.springframework.org/schema/security/spring-security.xsd">
-<<<<<<< HEAD
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="driverClassName" value="org.h2.Driver" />
-		<property name="url" value="jdbc:h2:~/test" />
-		<property name="username" value="sa" />
-		<property name="password" value="" />
-	</bean>
-
-=======
         
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="org.h2.Driver" />
@@ -29,7 +20,6 @@
 		<property name="username" value="sa" />
 		<property name="password" value="" />
 	</bean>
->>>>>>> 27253f5ab534bc095d906e296cdc04e722c02035
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -37,12 +27,7 @@
 			<list>
 				<value>com.niit</value>
 			</list>
-<<<<<<< HEAD
-		</property>
-		
-=======
 		</property>	
->>>>>>> 27253f5ab534bc095d906e296cdc04e722c02035
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>

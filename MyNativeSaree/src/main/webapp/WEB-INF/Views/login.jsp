@@ -5,10 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login Page</title>
-<<<<<<< HEAD
-=======
 
->>>>>>> 27253f5ab534bc095d906e296cdc04e722c02035
 <script src="resources/js/angular.min.js" ></script>
 <script src="resources/js/login.js" ></script>
 </head>

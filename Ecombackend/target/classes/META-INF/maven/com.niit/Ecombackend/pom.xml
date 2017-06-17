@@ -9,13 +9,8 @@
   <name>Ecombackend</name>
   <url>http://maven.apache.org</url>
   <properties>
-<<<<<<< HEAD
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  	
-=======
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>	
     <org.springframework-version>4.3.8.RELEASE</org.springframework-version>
->>>>>>> 27253f5ab534bc095d906e296cdc04e722c02035
   </properties>
       <dependencies>
      

@@ -9,23 +9,6 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd
 http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-<<<<<<< HEAD
-	<context:component-scan base-package="com.niit" />
- 
- 	<mvc:resources mapping="/resources/**" location="/resources/" />
-
-    <mvc:annotation-driven />
- 
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix">
-			<value>/WEB-INF/Views/</value>
-		</property>
-		<property name="suffix">
-			<value>.jsp</value>
-		</property>
-	</bean>
-	
-=======
 <context:component-scan base-package="com.niit" />
  
 	<bean id="viewResolver"
@@ -39,6 +22,5 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <mvc:annotation-driven />
     
->>>>>>> 27253f5ab534bc095d906e296cdc04e722c02035
 		
 </beans>

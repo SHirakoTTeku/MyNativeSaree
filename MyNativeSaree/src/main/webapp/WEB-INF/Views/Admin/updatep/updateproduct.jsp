@@ -56,8 +56,48 @@
 <p>
 * should be greater then 1</p>
 </form:errors>
-
-</div>	
+</div>
+	<div class="form-group">
+ <form:label  path="category">
+				<spring:message text="Category"/>
+</form:label>
+<%-- <form:select class="form-control" path="category" > --%>
+<%-- <form:option value="PartyWear">Party Wear</form:option> --%>
+<%-- <form:option value="CasualDress">Casual Dress</form:option> --%>
+<%-- <form:option value="WeddingDress">Wedding Dress</form:option> --%>
+<%-- </form:select> --%>
+</div>
+ <div class="form-group">
+ <form:label  path="desc">
+				<spring:message text="Description"/>
+</form:label>
+  <form:input class="form-control" path="desc" />
+  <form:errors path="name">
+  
+  <p class="errStyle">
+* Description Cannot be blank
+</p>
+ </form:errors>
+ </div>
+ 
+ <div class="form-group">
+   
+ <label>Upload Image</label>
+  <form:input type="file"  path="file"  class="form-control" />
+   <form:errors path="file" >
+  <p class="errStyle">
+ * Image must be Selected
+ </p>
+ </form:errors>
+ Uploaded Image:<form:input disabled="true" path="image"/>
+ </div>
+  <div class="form-group">
+ <input  class="btn btn-info"  type="submit"
+					value="<spring:message text="Update Product"/>" />
+ </div>
+ <div class="form-group">
+ <input class="btn btn-info" type="reset" value="<spring:message text="T=Reset"/>" />
+ </div>
 </form:form>
 </div>
 </div>
