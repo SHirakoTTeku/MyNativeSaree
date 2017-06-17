@@ -17,31 +17,25 @@ public class Order implements Serializable{
 	@Id
 	@Column(name="ORDERID")
 	@SequenceGenerator(name="order_seq",sequenceName="order_seq")
-	@GeneratedValue(strategy=GenerationType.AUTO,generator="ordr_seq")
+	@GeneratedValue(strategy=GenerationType.AUTO,generator="order_seq")
 	private int oId;
+	
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="userId")
-	private Customer userdetails;
+	private Customer userDetails;
 	
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="cardId")
 	private Cart cart;
 
 	public Customer getUserDetails(){
-		return userdetails;
+		return userDetails;
 	}
 	
 	public void setUserDetails(Customer userdetails){
-		this.userdetails=userdetails;
+		this.userDetails=userdetails;
 	}
 	
-	private Customer customer;
-	public Customer getCustomer(){
-		return customer;
-	}
-	public void setCustomer(Customer customer){
-		this.customer=customer;
-	}
 	public int getoId(){
 		return oId;
 	}
