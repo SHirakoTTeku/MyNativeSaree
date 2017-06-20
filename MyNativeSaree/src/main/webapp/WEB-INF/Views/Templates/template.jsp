@@ -33,21 +33,13 @@
 </style>
 </head>
 <body background="resources/images/background.jpg">
-<div>
-<nav class="navbar-inverse" navbar-fixed-top>
+<nav class="navbar-inverse">
 <div class="container-fluid">
 <div class="navbar-header">
-<a class="navbar-brand" href="index"><font size="5"><label style="color: white"> My Native Saree </label></font></a></div>
+<a class="navbar-brand" href="index"><font size="5">My Native Saree</font></a></div>
 <ul class="nav navbar-nav">
 <!-- <li><a href="home">Home Page</a>-->
 <li><a href="aboutus">About Us</a>
-<li class="dropdown"><a style="color: white;" class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="/view_All?id=1">Category 1</a></li>
-          <li><a href="/view_All?id=2">Category 2</a></li>
-          <li><a href="/view_All?id=3">Category 3</a></li>
-        </ul>
-      </li>
 <li><a href=contactus>Contact Us</a>
 <li><a href="login">Login</a>
 <li><a href=registrationpage>Register Here</a>
@@ -55,6 +47,5 @@
 </ul>
 </div>
 </nav>
-</div>
 </body>
 </html>
