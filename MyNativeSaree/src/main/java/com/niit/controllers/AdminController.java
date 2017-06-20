@@ -45,7 +45,7 @@ public class AdminController {
 		}
 		
 	}
-	
+
 	@RequestMapping(value="/Admin/deletp/delete",method= RequestMethod.GET)
 	public String DeletePage(){
 		return "/Admin/deletep/deleteproduct";
@@ -58,6 +58,7 @@ public class AdminController {
 		return new ModelAndView("View_All","msg","Product Deleted!");
 		
 	}
+	
 	
 	@RequestMapping(value="/Admin/updatep/edit", method= RequestMethod.GET)
 	public ModelAndView EditPage(@RequestParam("id")int id){
