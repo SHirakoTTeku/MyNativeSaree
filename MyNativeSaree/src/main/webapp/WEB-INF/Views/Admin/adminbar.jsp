@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -37,12 +38,12 @@
 <nav class="navbar-inverse">
 <div class="container-fluid">
 <div class="navbar-header">
-<a class="navbar-brand" href="index"><font size="5">My Native Saree</font></a></div>
+<a class="navbar-brand" href="<c:url value='/index'/>"><font size="5">My Native Saree</font></a></div>
 <ul class="nav navbar-nav">
-<li><a href="index">Home Page</a>
-<li><a href="/MyNativeSaree/admin/addp/add">Add Product</a>
-<li><a href="deleteproduct">Delete Product</a>
-<li><a href="updateproduct">Edit Product</a>
+<li><a href="<c:url value='/index'/>">Home Page</a>
+<li><a href="<c:url value='/Admin/addp/add'/>">Add Product</a>
+<li><a href="<c:url value='/Admin/deletep/delete'/>">Delete Product</a>
+<li><a href="<c:url value='/Admin/updatep/edit'/>">Edit Product</a>
 </ul>
 </div>
 </nav>

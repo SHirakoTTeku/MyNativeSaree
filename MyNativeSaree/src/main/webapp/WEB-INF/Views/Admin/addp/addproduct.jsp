@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -31,56 +34,77 @@
 <h1><center>Add Product</center></h1>
 </div>
 <div class="panel panel-body">
-<div class="table-responsive">
-<table class="table">
-<form:form role="form" action="add" method="post" modelAttribue="product" enctype="multipart/form-data">
-	<tr>
+<form:form role="form"  action="add" modelAttribute="product" enctype="multipart/form-data"> 
 		<div class="form-group">
-		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon1">
 		<form:label  path="name">
 						<spring:message text="Product Name"/>
 				</form:label>
-		</span></td>
-		<td><form:input style="20%;" class="form-control" path="name" />
+		<form:input style="20%;" class="form-control" path="name" />
 				<form:errors path="name" >
 						<p class="errStyle">
 								* Product Name should be atleast 3 characters
 						</p>
- 				</form:errors></td>
-		</div></div>
-		</tr>
-	<tr>
-		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon2">Product Price</span></td>
-		<td><input type="password" class="form-control" placeholder="Enter Product price" aria-describedby="sizing-addon2"></td>
+ 				</form:errors>
 		</div>
-	</tr>
-	<tr>
-		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon2">Product Quantity</span></td>
-		<td><input type="password" class="form-control" placeholder="Enter Product Quantity" aria-describedby="sizing-addon2"></td>
+	<div class="form-group">
+ 					<form:label  path="qty">
+							<spring:message text="Quantity Available"/>
+					</form:label>
+					<form:input class="form-control" path="qty" />
+					<form:errors path="qty" >
+							<p class="errStyle">
+									* should be greater than 1
+						    </p>
+ 				    </form:errors>
+ 	</div>
+		<div class="form-group">
+		<form:label path="price"><spring:message text="Product Price"/></form:label>
+		<form:input class="form-control" path="price"/>
+		<form:errors path="price" >
+						<p class="errStyle">
+										* should be greater than 1
+						</p>
+ 				</form:errors>
 		</div>
-	</tr>
-	<tr>
-		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon2">Image Path</span></td>
-		<td><input type="file" class="form-control" aria-describedby="sizing-addon2"></td>
+		<div class="form-group">
+		<form:label path="qty" class="form-control">
+		<spring:message text="Product Quantity"/>
+		</form:label>
+		<form:input class="form-control" path="qty"/>
+		<form:errors path="qty" >
+							<p class="errStyle">
+									* should be greater than 1
+						    </p>
+ 				    </form:errors>
 		</div>
-	</tr>
-	<tr>
-		<div class="input-group input-group-sm">
-		<td><button type="submit" class="btn">Add Product</button></td>
-		<td><button type="reset" class="btn">Reset</button></td>
+		<div class="form-group">
+ 				<form:label  path="desc">
+					<spring:message text="Description"/>
+				</form:label>
+  				<form:input class="form-control" path="desc" />
+  				<form:errors path="desc">
+  					<p class="errStyle">
+							* Cannot be blank
+					</p>
+ 				</form:errors>
+ 	</div>
+ 
+  <div class="form-group">
+ 				<label>Upload Image</label>
+  				<form:input type="file" path="file"  class="form-control" />
+   					<form:errors path="file" >
+  							<p class="errStyle">
+ 								* Cannot be blank
+ 							</p>
+ 					</form:errors>
+ 	</div>
+		<div class="form-group">
+		<button type="submit" class="btn">Add Product</button>
+		<button type="reset" class="btn">Reset</button>
 		</div>
-	</tr>
 </form:form>
-</table>
 </div>
 </div>
 </div>
-				</div>
-			</div>
-		</div>
 </body>
 </html>

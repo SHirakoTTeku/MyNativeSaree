@@ -96,7 +96,7 @@
 					value="<spring:message text="Update Product"/>" />
  </div>
  <div class="form-group">
- <input class="btn btn-info" type="reset" value="<spring:message text="T=Reset"/>" />
+ <input class="btn btn-info" type="reset" value="<spring:message text="Reset"/>" />
  </div>
 </form:form>
 </div>
