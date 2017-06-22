@@ -41,6 +41,7 @@ public class CustomerController {
 	@RequestMapping(value="/registrationpage", method=RequestMethod.POST)
 	public ModelAndView Register(@ModelAttribute("user")@Valid User c,BindingResult result,Model m)
 	{
+		System.out.println("Failed to Register");
 	if(result.hasErrors()){
 		return new ModelAndView("registrationpage");
 	}

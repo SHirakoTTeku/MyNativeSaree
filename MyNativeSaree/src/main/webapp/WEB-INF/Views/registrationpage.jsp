@@ -19,7 +19,7 @@ ${success}
 </p>	
 <div class="container">
 <div class="col-sm-6">
-<form:form role="form" action="registrationpage" modelAttribute="user">
+<form:form role="form" action="registrationpage" modelAttribute="user" method="post">
 		<div class="form-group">
 		<form:label  path="cust.custName">
 				<spring:message text="Enter Your Full Name"/>
