@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,45 +10,40 @@
 <script src="resources/js/angular.min.js" ></script>
 <script src="resources/js/login.js" ></script>
 </head>
-<body ng-app="myModule">
-<jsp:include page="Templates/template.jsp"></jsp:include>
+<body>
+<jsp:include page="Templates/Header.jsp"></jsp:include>
 <h3></h3>
 <div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-<div class="panel panel-default">
-<div class="panel panel-heading">
-<h1><center>Login</center></h1>
-</div>
-<div class="panel panel-body">
-<div class="table-responsive">
-<table class="table">
-<form method="post">
-	<tr>
-		<div class="input-group input-group-sm"  ng-controller="myController">
-		<td><span class="input-group-addon" id="sizing-addon1">User Name : <font color="#ff1a1a">{{message}}</font></span></td>
-		<td><input type="text" class="form-control" placeholder="Enter your User Name" aria-describedby="sizing-addon1" ng-model="message"></td>
-		</div>
-	</tr>
-	<tr>
+<c:if test="${error=='true'}">
+
+  <div class="errorblock">
+   Your login attempt was not successful, try again.
+ 
+  </div>
+  </c:if>
+  <c:if test="${not empty logoutmsg }">
+   <div class="logoutblock">
+   <c:out value="${logoutmsg}" />
+   </div>
+ </c:if>
+
+<form role="form" action="<c:url value='login' />" method="post" >
+	
+	<div class="form-group">
+		<label for="username">User Name:</label>
+		<input style="width: 20%;" type="text" id="username" name="username"  class="form-control" />
+  		</div>
+		<div class="form-group">
+		<label for="password">Password:</label>
+		<input style="width: 20%;" type="password" id="password" class="form-control" name="password" />
+  </div>
+
 		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon2">Password</span></td>
-		<td><input type="password" class="form-control" placeholder="Enter your Password" aria-describedby="sizing-addon2"></td>
+		<button type="submit" class="btn">submit</button>
+		<button type="reset" class="btn">Reset</button>
 		</div>
-	</tr>
-	<tr>
-		<div class="input-group input-group-sm">
-		<td><button type="submit" class="btn">submit</button></td>
-		<td><button type="reset" class="btn">Reset</button></td>
-		</div>
-	</tr>
+
 </form>
-</table>
-</div>
-</div>
-</div>
-				</div>
-			</div>
-		</div>
+<h4>Not A User ? <a href="registrationpage">Sign Up Here</a></h4></div>
 </body>
 </html>

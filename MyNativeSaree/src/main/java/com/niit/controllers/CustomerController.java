@@ -30,19 +30,19 @@ public class CustomerController {
 	
 	@RequestMapping(value="/login")
 		public String Login(){
-			return "Login";
+			return "login";
 	}
 	
-	@RequestMapping(value="/Register" , method=RequestMethod.GET)
+	@RequestMapping(value="/registrationpage" , method=RequestMethod.GET)
 		public ModelAndView Register(){
-		return new ModelAndView("Register","user", new User());
+		return new ModelAndView("registrationpage","user", new User());
 	}
 	
-	@RequestMapping(value="/Register", method=RequestMethod.POST)
+	@RequestMapping(value="/registrationpage", method=RequestMethod.POST)
 	public ModelAndView Register(@ModelAttribute("user")@Valid User c,BindingResult result,Model m)
 	{
 	if(result.hasErrors()){
-		return new ModelAndView("Register");
+		return new ModelAndView("registrationpage");
 	}
 	else{
 		customerservice.addCustomer(c);

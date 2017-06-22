@@ -18,7 +18,7 @@ text-align: center;
   </style>
 </head>
 <body>
-<jsp:include page="Templates/template.jsp"></jsp:include><br><br>
+<jsp:include page="Templates/Header.jsp"></jsp:include><br><br>
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->

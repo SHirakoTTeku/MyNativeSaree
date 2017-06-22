@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -70,5 +71,33 @@ public class CartController {
 		cartItemServices.addCartItem(cartItem);
 		
 	}
+	
+	@RequestMapping(value = "/removeItem/{itemId}", method = RequestMethod.PUT)
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public void removeItem (@PathVariable("itemId") int itemId) {
+    	System.out.println("Deleting item Id: "+itemId);
+        Item cartItem = cartItemServices.getCartItemByItemId(itemId);
+        System.out.println(cartItem.getProduct().getName());
+        cartItemServices.removeCartItem(cartItem);
+
+    }
+	@RequestMapping(value = "/clearCartItems", method = RequestMethod.DELETE)
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public void clearCartItems(Principal principal) {
+    	
+    	Customer usersDetail = userDetailServices.getUserByUsername(principal.getName());
+    	System.out.println("cart id:"+ usersDetail.getCustName());
+        Cart cart = usersDetail.getCart();
+        
+        cartItemServices.removeAllCartItem(cart);
+    }
+	@ExceptionHandler(IllegalArgumentException.class)
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "Illegal request, please verify your payload.")
+    public void handleClientErrors (Exception e) {}
+	
+	@ExceptionHandler(Exception.class)
+    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR, reason = "Internal Server Error Occured.")
+    public void handleServerErrors (Exception e) {}	
+	
 	}
 	

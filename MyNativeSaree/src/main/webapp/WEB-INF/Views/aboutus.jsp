@@ -7,7 +7,7 @@
 <title>About Us</title>
 </head>
 <body>
-<jsp:include page="Templates/template.jsp"></jsp:include>
+<jsp:include page="Templates/Header.jsp"></jsp:include>
 <h1>This is About us Page</h1>
 </body>
 </html>

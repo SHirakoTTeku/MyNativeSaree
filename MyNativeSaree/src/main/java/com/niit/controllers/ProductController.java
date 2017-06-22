@@ -47,8 +47,9 @@ public class ProductController {
 	}
 
 	@RequestMapping(value="/Admin/deletp/delete",method= RequestMethod.GET)
-	public String DeletePage(){
-		return "/Admin/deletep/deleteproduct";
+	public ModelAndView DeletePage(){
+		Product p=new Product();
+		return new ModelAndView("Admin/deletep/deleteproduct", "product", p);
 	}
 	
 	@RequestMapping(value="/Admin/deletep/delete",method= RequestMethod.POST)

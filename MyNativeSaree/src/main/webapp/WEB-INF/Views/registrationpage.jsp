@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page isELIgnored="false" language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>        
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,48 +10,91 @@
 <title>${title}</title>
 </head>
 <body>
-<jsp:include page="Templates/template.jsp"></jsp:include>
+<jsp:include page="Templates/Header.jsp"></jsp:include>
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-6">
-<div class="panel panel-default">
-<div class="panel panel-heading">
 <h1><center>Registration Page</center></h1>
 </div>
-<div class="panel panel-body">
-<div class="table-responsive">
-<table class="table">
-<form method="post">
-	<tr>
-		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon1">User Name</span></td>
-		<td><input type="text" class="form-control" placeholder="Enter your User Name" aria-describedby="sizing-addon1"></td>
-		</div> </tr>
-	<tr>	
-		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon2">Password</span></td>
-		<td><input type="password" class="form-control" placeholder="Enter your Password" aria-describedby="sizing-addon2"></td>
-		</div></tr>
-	<tr>	
-		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon3">Confirm Password</span></td>
-		<td><input type="password" class="form-control" placeholder="Enter your Password Again" aria-describedby="sizing-addon3"></td>
-		</div></tr>
-	<tr>
-		<div class="input-group input-group-sm">
-		<td><span class="input-group-addon" id="sizing-addon4">E-Mail Identification</span></td>
-		<td><input type="text" class="form-control" placeholder="Enter your E-Mail ID" aria-describedby="sizing-addon4"></td>
-		</div></tr>
-	<tr>
-	<td><button type="submit" class="btn">submit</button></td>
-	<td><button type="reset" class="btn">Reset</button></td>
-	</tr>
-</form>
-</table>
+<p>
+${success}
+</p>	
+<div class="container">
+<div class="col-sm-6">
+<form:form role="form" action="registrationpage" modelAttribute="user">
+		<div class="form-group">
+		<form:label  path="cust.custName">
+				<spring:message text="Enter Your Full Name"/>
+	</form:label>
+		<form:input  class="form-control" path="cust.custName" />
+		<form:errors path="cust.custName" >
+			<p class="errStyle">
+					* Invalid Customer name
+</p>
+ </form:errors></div>	
+		
+		<div class="form-group">
+		<form:label  path="userName">
+				<spring:message text="User Name"/>
+	</form:label>
+	<form:input class="form-control" path="userName" />
+		<form:errors path="userName" >
+			<p class="errStyle">
+					* Invalid Username
+</p>
+ </form:errors>
+ </div>	
+		
+		<div class="form-group">
+		<form:label  path="password">
+				<spring:message text="Password"/>
+	</form:label>
+		<form:input type="password" class="form-control" path="password" />
+		<form:errors path="password" >
+			<p class="errStyle">
+					* Invalid Password
+</p>
+ </form:errors>
+ 
+  </div>
+    <div class="form-group">
+ 	<form:label  path="cust.email">
+				<spring:message text="Email"/>
+	</form:label>
+	<form:input class="form-control" path="cust.email" />
+		<form:errors path="cust.email" >
+			<p class="errStyle">
+					* Invalid Email
+</p>
+ </form:errors>
+ </div>
+  <div class="form-group">
+ 	<form:label  path="cust.phone">
+				<spring:message text="Phone Number"/>
+	</form:label>
+	<form:input class="form-control" path="cust.phone" />
+		<form:errors path="cust.phone" >
+			<p class="errStyle">
+					* Invalid Phone no.
+</p>
+ </form:errors>
+ </div>
+
+  <div class="form-group">
+ 	<form:label  path="cust.address">
+				<spring:message text="Address"/>
+	</form:label>
+	<form:input class="form-control" path="cust.address" />
+		<form:errors path="cust.address" >
+			<p class="errStyle">
+					* Invalid Address
+</p>
+ </form:errors>
+ </div>
+		
+		<button type="submit" class="btn">submit</button>
+	<button type="reset" class="btn">Reset</button>
+	
+</form:form>
 </div>
 </div>
-				</div>
-			</div>
-		</div>
 </body>
 </html>

@@ -37,10 +37,6 @@ public String contactus(){
 public String Native(){
 	return "index";
 }
-@RequestMapping(value="/login")
-public String login(){
-	return "login";
-}
 @RequestMapping(value="/registrationpage")
 public String register(){
 	return "registrationpage";
