@@ -28,6 +28,9 @@ public class CustomerController {
 	@Autowired
 	private Customer_Service customerservice;
 	
+	String failrmsg;
+	String faillmsg;
+	
 	@RequestMapping(value="/login")
 		public String Login(){
 			return "login";
@@ -38,22 +41,26 @@ public class CustomerController {
 		return new ModelAndView("registrationpage","user", new User());
 	}
 	
-	@RequestMapping(value="/registrationpage", method=RequestMethod.POST)
-	public ModelAndView Register(@ModelAttribute("user")@Valid User c,BindingResult result,Model m)
+	@RequestMapping(value="/registrationprocess", method=RequestMethod.POST)
+	public ModelAndView RegisterProcess(@ModelAttribute("user")@Valid User c,BindingResult result,Model m)
 	{
-		System.out.println("Failed to Register");
+		
 	if(result.hasErrors()){
-		return new ModelAndView("registrationpage");
+		System.out.println("Failed to Register");
+		System.out.println("Error in: "+result.getFieldError().getField());
+		return new ModelAndView("registrationpage", "failrmsg", "Registration Failed");
 	}
 	else{
 		customerservice.addCustomer(c);
 	}
-	return new ModelAndView("Login","logoutmsg","Registered Successfully!");
+	return new ModelAndView("login","logoutmsg","Registered Successfully!");
 	}
 	
 	@RequestMapping(value="/fail2login", method=RequestMethod.GET)
 	public ModelAndView LoginFailed(Model Map){
-	return new ModelAndView("Login", "error", true);	
+		System.out.println("Failed to Login");
+		Map.addAttribute("faillmsg", "Failed To Login");
+	return new ModelAndView("login", "error", true);	
 	}
 	@RequestMapping(value="/logout", method=RequestMethod.GET)
 	

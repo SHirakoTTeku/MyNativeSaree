@@ -17,9 +17,11 @@
 <p>
 ${success}
 </p>	
+<center><h4><font color="red">${failrmsg}</font></h4></center>
 <div class="container">
 <div class="col-sm-6">
-<form:form role="form" action="registrationpage" modelAttribute="user" method="post">
+<c:url var="post_url"  value="registrationprocess" />
+<form:form role="form" action="${post_url}" modelAttribute="user" method="post">
 		<div class="form-group">
 		<form:label  path="cust.custName">
 				<spring:message text="Enter Your Full Name"/>
@@ -35,7 +37,7 @@ ${success}
 		<form:label  path="userName">
 				<spring:message text="User Name"/>
 	</form:label>
-	<form:input class="form-control" path="userName" />
+	<form:input class="form-control" path="username" />
 		<form:errors path="userName" >
 			<p class="errStyle">
 					* Invalid Username
