@@ -44,6 +44,9 @@ public class User {
 	private Customer cust;
 	private String password;
 	private boolean enable ;
+	
+
+	
 	public Customer getCust() {
 		return cust;
 	}

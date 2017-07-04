@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+    <%@ page isELIgnored="false" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,14 +10,22 @@
 
 <script src="resources/js/angular.min.js" ></script>
 <script src="resources/js/login.js" ></script>
+<style>
+.errorblock
+{
+color:red;
+}
+.logoutblock{
+color:white;
+}
+</style>
 </head>
 <body>
 <jsp:include page="Templates/Header.jsp"></jsp:include>
-<h3></h3>
 <div class="container">
 <c:if test="${error=='true'}">
 
-  <div class="errorblock">
+  <div class="errorblock"><br>
    Your login attempt was not successful, try again.
  
   </div>

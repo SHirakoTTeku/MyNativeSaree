@@ -22,15 +22,15 @@
 </head>
 <body>
 <div class="container">
-<jsp:include page="/WEB-INF/Views/Admin/adminbar.jsp"/>
+<jsp:include page="/WEB-INF/Views/Admin/admin.jsp"/>
 <div style="width: 50%; class="container">
 <form:form modelAttribute="product" enctype="multipart/form-data" role="form" action="edit">
 <form:input style="visibility:hidden;" path="pid"/>
 <form:input style="visibility:hidden;" path="image"/> 
 <div class="form-group">
-<form:lable path="name">
+<form:label path="name">
 <spring:message text="Product Name"/>
-</form:lable>
+</form:label>
 <form:input class="form-control" path="name"/>
 <form:errors path="name">
 <p class="errStyle">

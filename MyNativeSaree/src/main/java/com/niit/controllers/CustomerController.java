@@ -71,7 +71,7 @@ public class CustomerController {
 	     {
 		new SecurityContextLogoutHandler().logout(request, response, auth);
 	     }
-	   return new ModelAndView("Login","logoutmsg","Logged out Successfully");
+	   return new ModelAndView("login","logoutmsg","Logged out Successfully");
 	}
 	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
     public String printWelcome(ModelMap model, Principal principal) {

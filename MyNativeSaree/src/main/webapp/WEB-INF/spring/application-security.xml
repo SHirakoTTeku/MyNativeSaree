@@ -22,7 +22,7 @@ xmlns="http://www.springframework.org/schema/beans"
 		 username-parameter="username"
   		 password-parameter="password"
   		 login-page="/login" 
-   		 default-target-url="/welcome" 
+   		 default-target-url="/index" 
    		 authentication-failure-url="/fail2login" /> 
    		 <security:logout logout-url="/logout1" logout-success-url="/logout" />
    		 <security:csrf disabled="true"/>

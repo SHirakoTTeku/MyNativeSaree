@@ -25,7 +25,7 @@ public class ProductController {
 	
 
 	@RequestMapping(value="/Admin/addp/add", method = RequestMethod.GET)
-	public ModelAndView addproduct(){
+	public ModelAndView addproductaction(){
 		Product p=new Product();
 		return new ModelAndView("Admin/addp/addproduct", "product", p);
 	}
@@ -34,7 +34,7 @@ public class ProductController {
 	public ModelAndView ActionPage(HttpServletRequest request,@ModelAttribute("product")@Validated Product p, BindingResult result,Model m){
 		System.out.println("Adding "+p);
 		System.out.println(p.getCategory());
-		if(result.hasErrors()){
+		if(result.hasErrors()){	
 			System.out.println("Error: "+result.getAllErrors());
 			return new ModelAndView("Admin/addp/addproduct");
 		}else {
@@ -47,7 +47,7 @@ public class ProductController {
 	}
 
 	@RequestMapping(value="/Admin/deletp/delete",method= RequestMethod.GET)
-	public ModelAndView DeletePage(){
+	public ModelAndView DeletePageaction(){
 		Product p=new Product();
 		return new ModelAndView("Admin/deletep/deleteproduct", "product", p);
 	}
@@ -62,7 +62,7 @@ public class ProductController {
 	
 	
 	@RequestMapping(value="/Admin/updatep/edit", method= RequestMethod.GET)
-	public ModelAndView EditPage(@RequestParam("id")int id){
+	public ModelAndView EditPageaction(@RequestParam("id")int id){
 		Product p=service.getById(id);
 		
 		return new ModelAndView("/Admin/updatep/updateproduct","product",p);
@@ -93,8 +93,20 @@ public class ProductController {
 	public String addsupplier(){
 		return "Admin/addsupplier";
 	}
-	@RequestMapping(value="/adminbar")
+	@RequestMapping(value="/addproduct")
+	public String AddProduct(){
+		return "/Admin/addp/addproduct";
+	}
+	@RequestMapping(value="/deleteproduct")
+	public String DeleteProduct(){
+		return "/Admin/deletep/deleteproduct";
+	}
+	@RequestMapping(value="/updateproduct")
+	public String UpdateProduct(){
+		return "/Admin/updatep/updateproduct";
+	}
+	@RequestMapping(value="/admin")
 	public String adminbar(){
-		return "Admin/adminbar";
+		return "Admin/admin";
 	}
 }

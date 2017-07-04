@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-<jsp:include page="/WEB-INF/Views/Admin/adminbar.jsp"></jsp:include><br><br>
+<jsp:include page="/WEB-INF/Views/Admin/admin.jsp"></jsp:include><br><br>
 <h3>Are you sure , you want to delete this product?</h3>
 <div class="row">
 <div class="col-sm-6">

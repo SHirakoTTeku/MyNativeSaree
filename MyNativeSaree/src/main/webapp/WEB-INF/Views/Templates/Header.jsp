@@ -30,9 +30,10 @@
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
+
 </style>
 </head>
-<body background="resources/images/background.jpg">
+<body background="<c:url value='resources/images/background.jpg' />" >
 <div>
 <nav class="navbar-inverse" navbar-fixed-top>
 <div class="container-fluid">
@@ -53,10 +54,27 @@
       		<security:authorize access="hasRole('ROLE_ADMIN')">
          
       		<li><a style="color: white; font-family: serif; font-size: large; "  href="<c:url value='/Admin/addp/add'/>" >  Add Product</a></li>
+      		<li><a style="color: white; font-family: serif; font-size: large; "  href="<c:url value='/admin'/>" >Admin</a></li>
       </security:authorize>
-<li><a href="login">Login</a>
-<li><a href=registrationpage>Register Here</a>
-<li><a href=adminbar>Admin</a>
+      <security:authorize access="isAnonymous()">
+			       <li><a style="color: white; font-family: serif; font-size: large; "  href="registrationpage"> <span class="glyphicon glyphicon-user"></span> Register</a></li>
+				<li><a style="color: white; font-family: serif; font-size: large; "  href="<c:url value='/login' />"><span class="glyphicon glyphicon-hand-right"></span>View Cart</a></li>
+				<li><a style="color: white; font-family: serif; font-size: large; "  href="<c:url value='/login' />"> <span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			</security:authorize>
+			<security:authorize access="isAuthenticated()">
+				
+				<security:authorize access="hasRole('ROLE_USER')">
+				<li><a style="color: white; font-family: serif; font-size: large; "  href="<c:url value='/memberShip'/>"><span
+						class="glyphicon glyphicon-hand-right"></span>View Cart</a></li>
+						</security:authorize>
+				<li><span class="glyphicon"></span><h5 style="color:White;">Welcome <%= request.getUserPrincipal().getName() %></h5> 
+				</li>
+				<li><a style="color: white; font-family: serif; font-size: large; "  href='<c:url value="/logout1" />' >
+						<span class="glyphicon glyphicon-log-out"></span> Logout
+				</a></li>
+			</security:authorize>
+      
+			
 </ul>
 </div>
 </nav>
