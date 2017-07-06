@@ -7,7 +7,7 @@
 <title>Add Supplier</title>
 </head>
 <body>
-<jsp:include page="/WEB-INF/Views/Admin/adminbar.jsp"></jsp:include><br><br>
+<jsp:include page="/WEB-INF/Views/Admin/admin.jsp"></jsp:include><br><br>
 <div class="container">
 			<div class="row">
 				<div class="col-lg-6">

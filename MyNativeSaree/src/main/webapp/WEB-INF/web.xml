@@ -6,7 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
   <context-param>
 	<param-name>contextConfigLocation</param-name>
-	<param-value>/WEB-INF/spring/applicationConfig-context.xml, /WEB-INF/spring/application-security.xml
+	<param-value>/WEB-INF/spring/applicationConfig-context.xml, /WEB-INF/spring/application-security.xml,/WEB-INF/spring/webflow-config.xml
 				</param-value>
 	</context-param>
 	
