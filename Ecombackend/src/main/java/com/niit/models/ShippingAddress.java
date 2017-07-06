@@ -9,7 +9,7 @@ import com.niit.models.Customer;
 
 @Entity
 @Table(name="ShippingAddress")
-public class ShippingAddress {
+public class ShippingAddress implements Serializable{
 
 	@Id
 	@SequenceGenerator(name="ship_seq", sequenceName="ship_seq")

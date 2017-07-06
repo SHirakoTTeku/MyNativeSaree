@@ -41,7 +41,7 @@
  			</thead> 
  			<tbody> 
  				<tr ng-repeat = "items in cart.item"> 
- 					 	<td class="span1"><img height="60px" width="60px" src="<c:url value="/resources/image/{{items.product.category}}/{{items.product.image}}" /> " alt="image"/></td> 
+				<td class="span1"><img height="60px" width="60px" src="<c:url value="/resources/images/{{items.product.category}}/{{items.product.image}}" /> " alt="image"/></td>
  						<td>{{items.product.name}}</td> 
  						<td>{{items.product.price}}</td> 
  						<td>{{items.qunitity}}</td> 
