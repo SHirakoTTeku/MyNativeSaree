@@ -17,7 +17,8 @@
 <h3>Are you sure , you want to delete this product?</h3>
 <div class="row">
 <div class="col-sm-6">
-<form:form action="delete" method="post" role="form">
+<c:url var="Delete_Action"  value="Admin/deletep/delete" />
+<form:form action="${Delete_Action}" method="post" role="form" >
   <input type="text" name="id" value="${param.id}" style="visibility:hidden;">
   
     <input type="submit" value="Confirm Delete" class="btn btn-info" />

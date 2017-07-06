@@ -24,7 +24,8 @@
 <div class="container">
 <jsp:include page="/WEB-INF/Views/Admin/admin.jsp"/>
 <div style="width: 50%; class="container">
-<form:form modelAttribute="product" enctype="multipart/form-data" role="form" action="edit">
+<c:url var="Edit_Action"  value="Admin/updatep/edit" />
+<form:form modelAttribute="product" enctype="multipart/form-data" role="form" action="${Edit_Action}" method="post">
 <form:input style="visibility:hidden;" path="pid"/>
 <form:input style="visibility:hidden;" path="image"/> 
 <div class="form-group">

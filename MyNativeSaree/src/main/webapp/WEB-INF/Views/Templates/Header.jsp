@@ -38,15 +38,16 @@
 <nav class="navbar-inverse" navbar-fixed-top>
 <div class="container-fluid">
 <div class="navbar-header">
-<a class="navbar-brand" href="index"><font size="5"><label style="color: white"> My Native Saree </label></font></a></div>
+<a class="navbar-brand" href="/MyNativeSaree/index"><font size="5"><label style="color: white"> My Native Saree </label></font></a></div>
 <ul class="nav navbar-nav">
 <!-- <li><a href="home">Home Page</a>-->
 <li><a href="aboutus">About Us</a>
+<li><a style="color: white; font-family: serif; font-size: large; " href="/MyNativeSaree/viewAll">View All </a></li>
 <li class="dropdown"><a style="color: white;" class="dropdown-toggle" data-toggle="dropdown" href="#">Category <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="/view_All?id=1">Category 1</a></li>
-          <li><a href="/view_All?id=2">Category 2</a></li>
-          <li><a href="/view_All?id=3">Category 3</a></li>
+          <li><a href="/viewAll?id=1">Category 1</a></li>
+          <li><a href="/viewAll?id=2">Category 2</a></li>
+          <li><a href="/viewAll?id=3">Category 3</a></li>
         </ul>
       </li>
 <li><a href=contactus>Contact Us</a>

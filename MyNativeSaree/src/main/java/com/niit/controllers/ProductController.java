@@ -81,7 +81,7 @@ public class ProductController {
 				service.storeFile(p, request);
 			}
 			service.udateProduct(p);
-				return new ModelAndView("View_All","msg","Product Updated!");
+				return new ModelAndView("viewAll","msg","Product Updated!");
 			}
 	}
 	
@@ -93,7 +93,7 @@ public class ProductController {
 	public String addsupplier(){
 		return "Admin/addsupplier";
 	}
-	@RequestMapping(value="/addproduct")
+	/*@RequestMapping(value="/addproduct")
 	public String AddProduct(){
 		return "/Admin/addp/addproduct";
 	}
@@ -104,7 +104,7 @@ public class ProductController {
 	@RequestMapping(value="/updateproduct")
 	public String UpdateProduct(){
 		return "/Admin/updatep/updateproduct";
-	}
+	}*/
 	@RequestMapping(value="/admin")
 	public String adminbar(){
 		return "Admin/admin";

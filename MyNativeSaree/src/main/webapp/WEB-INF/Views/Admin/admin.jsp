@@ -38,9 +38,9 @@
 <body background="resources/images/background.jpg">
 
 <div class="container-fluid">
-<a href="<c:url value='/addproduct'/> ">Add Product</a>
-<a href="<c:url value='/updateproduct' />">Update Product</a>
-<a href="<c:url value='/deleteproduct' />">Delete Product</a>
+<a href="<c:url value='/Admin/addp/add'/> ">Add Product</a>
+<a href="<c:url value='/Admin/updatep/edit' />">Update Product</a>
+<a href="<c:url value='/Admin/deletep/delete' />">Delete Product</a>
 </div>
 </body>
 </html>

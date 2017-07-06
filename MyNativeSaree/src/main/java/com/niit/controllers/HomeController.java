@@ -57,10 +57,10 @@ public ModelAndView display(@RequestParam(name="id") String prdid){
 	  return mv;
 	  
 }
-@RequestMapping(value="/view_All")
+@RequestMapping(value="/viewAll")
 public String View_All()
 {
-	return "View_All";
+	return "viewAll";
 }
 }
 

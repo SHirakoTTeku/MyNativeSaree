@@ -40,6 +40,7 @@ public class CartController {
 		Cart cart = userDetail.getCart();
 		return cart;
 	}
+		
 	
 	@RequestMapping(value = "addItem/{itemId}", method = RequestMethod.PUT)
 	   @ResponseStatus(value = HttpStatus.NO_CONTENT)

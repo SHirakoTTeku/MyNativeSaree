@@ -15,19 +15,21 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<title>Boutique</title>
+<title>MyNativeSaree</title>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="<c:url value='/resources/js/AngularProductController.js' />"></script>
+
+<style>
+table.customcolor{
+color:white;
+}
+</style>
+
 </head>
 <body ng-app="myApp" style="background-color:white;">
 <%@ include file = "../Views/Templates/Header.jsp" %>
 <br><br><br>
 <div class="container" >
-<marquee>
- <label>call us for special dress:022 23423432 we sell best product we have latest collection of dress </label>
- </marquee>
- 
-<Div class="container">
 <div ng-controller="myCtrl"  class="container">
 <div align="justify">
  <input type="text" id="query" ng-model="query" />
@@ -41,7 +43,7 @@
 	<c:if test="${!(pid<=3)}" >
 		<c:set var="pid" value="4" />
 	</c:if>
-<table style="width: 100%;" class="table">
+<table style="width: 100%;" class="table customcolor">
 <tr>
 <th ng-click="sort('pid')"><a style="color: Black;" href="#"> <span class="glyphicon glyphicon-chevron-down"> Product Id</span></a> </th>
 <th ng-click="sort('image')"> <a style="color: Black;" href="#">  <span class="glyphicon glyphicon-chevron-down"> Image</span></a>  </th>
@@ -64,7 +66,7 @@
 		<tr ng-repeat="product in data|filter:query|orderBy:sortKey:reverse">
 	</c:if>
    <td>{{product.pid}} </td>
-   <td ><img src="<c:url value='/resources/image/{{product.category}}/{{product.image}}' />"
+   <td ><img src="<c:url value='/resources/images/{{product.image}}' />"
     alt="no images" width="100" height="100" /></td>
    <td> {{product.name}} </td>
    <td>Rs.{{product.price}}</td>
@@ -99,13 +101,12 @@
             </security:authorize>
   </td>
   <security:authorize access="hasRole('ROLE_ADMIN')">
-   <td> <a href="/SaranyaBoutiqueFrontEnd/admin/edit?id={{product.pid}}" class="btn btn-primary">EDIT</a></td>
-   <td> <a href="/SaranyaBoutiqueFrontEnd/admin/delete?id={{product.pid}}" class="btn btn-primary">DELETE</a></td>
+   <td> <a href="/MyNativeSaree/admin/edit?id={{product.pid}}" class="btn btn-primary">EDIT</a></td>
+   <td> <a href="/MyNativeSaree/admin/delete?id={{product.pid}}" class="btn btn-primary">DELETE</a></td>
    </security:authorize>
    
    </tr>
    </table>
-      
 </div>
 </div>
 </div>

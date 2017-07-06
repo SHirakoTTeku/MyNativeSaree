@@ -35,7 +35,8 @@
 <h1><center>Add Product</center></h1>
 </div>
 <div class="panel panel-body">
-<form:form role="form"  action="add" modelAttribute="product" enctype="multipart/form-data"> 
+<c:url var="Add_Action"  value="add" />
+<form:form role="form"  action="${Add_Action}" modelAttribute="product" enctype="multipart/form-data" method="post"> 
 		<div class="form-group">
 		<form:label  path="name">
 						<spring:message text="Product Name"/>
