@@ -1,5 +1,6 @@
 package com.niit.dao;
 
+import java.util.Date;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -28,9 +29,11 @@ public class CustomerDaoImpl implements CustomerDao {
 			Cart c = new Cart();
 			c.setGrandtotal(0);
 			c.setUserDetails(u.getCust());
+			
 			session.save(c);
 			Customer cust = u.getCust();
 			cust.setCart(c);
+			cust.setLastLoginDate(new java.sql.Date(System.currentTimeMillis()));
 			
 			session.save(u.getCust());
 			u.setEnable(true);
@@ -40,6 +43,10 @@ public class CustomerDaoImpl implements CustomerDao {
 			ur.setAuthority("ROLE_USER");
 			ur.setCust(u.getCust());
 			session.save(ur);
+			
+			c.setUserDetails(cust);
+			session.update(c);
+			session.save(c);
 			
 			session.close();
 		

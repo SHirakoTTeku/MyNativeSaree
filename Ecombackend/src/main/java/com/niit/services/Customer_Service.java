@@ -1,5 +1,6 @@
 package com.niit.services;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class Customer_Service {
 	public void addCustomer(User c) {
 	
 		cust.addcustomer(c);
+		
 		
 	}
 	public Customer getCustomerById(int id) {

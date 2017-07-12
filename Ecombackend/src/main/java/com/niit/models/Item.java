@@ -34,7 +34,9 @@ public class Item {
 	  @JoinColumn(name = "cartId")
 	  @JsonIgnore
 	  private Cart cart;
-
+	
+	
+	
 	private double totalPrice;
 
 	public int getQunitity() {

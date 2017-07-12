@@ -1,5 +1,7 @@
 package com.niit.models;
 import java.io.Serializable;
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -18,6 +20,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+
 @Entity
 @Table(name="Customer")
 public class Customer {
@@ -25,13 +28,14 @@ public class Customer {
 	@Id
 	@SequenceGenerator(name="cust_seq", sequenceName="cust_seq")
 	@GeneratedValue(strategy=GenerationType.AUTO, generator="cust_seq")
-	@Column(name="CustID")
-	
+	@Column(name="custId")
 	int custId;
+	
 	@Column(name="Cname")
 	@NotBlank
 	@Pattern(regexp="[a-z A-Z]{3,50}")
 	String custName;
+	
 	@Email
 	@Column(name="Email",unique=true)
 	@NotBlank
@@ -54,16 +58,33 @@ public class Customer {
 	public void setShippingAddress(ShippingAddress shippingaddress){
 		this.shippingaddress=shippingaddress;
 	}
+	
+
+	@Column(name="LAST_LOGIN_DATE")
+    private Date lastLoginDate;
+	
+
+	public Date getLastLoginDate() {
+		return lastLoginDate;
+	}
+
+	public void setLastLoginDate(Date lastLoginDate) {
+		this.lastLoginDate = lastLoginDate;
+	}
+
+
+	@OneToOne(fetch=FetchType.EAGER)
+	@JoinColumn(name="cartId")
+	@JsonIgnore
+	private Cart cart;
+	
 	public Cart getCart(){
 		return cart;
 	}
 	public void setCart(Cart cart){
 		this.cart=cart;
 	}
-	@OneToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="cartid")
-	@JsonIgnore
-	private Cart cart;
+	
 	public int getCustId(){
 		return custId;
 	}

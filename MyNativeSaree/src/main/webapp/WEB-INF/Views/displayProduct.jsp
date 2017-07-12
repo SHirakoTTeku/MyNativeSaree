@@ -4,6 +4,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<style>
+.table+ul{
+color:white;
+}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>DisplayCake</title>
 <!-- jQuery library -->
@@ -21,7 +26,8 @@
 
     <table style="align:'center'" class="table">
      <tr>
-         <td> <img src="<c:url value='/resources/image/${product.category}/${product.image}' />" alt="no images" width="500" height="500" /> </td>
+         <%-- <td> <img src="<c:url value='/resources/images/${product.category}/${product.image}' />" alt="no images" width="500" height="500" /> </td> --%>
+			<td> <img src="<c:url value='/resources/images/${product.image}' />" alt="no images" width="500" height="500" /> </td>
 			<td>
 			<ul>
 				<li><h4 style="font-family:cursive;color:red;"> Product Id:</h4>  ${product.pid}</li>
